@@ -1,13 +1,13 @@
 {
   "hero": {
-    "title": "Construyo software y objetos físicos",
-    "text": "Exploro ideas a través de proyectos: desde código hasta materia, trabajando con madera y piedra.",
+    "title": "Frontend escalable con arquitectura hexagonal",
+    "text": "Desarrollo aplicaciones web fáciles de mantener, adaptar y extender sin romper lo existente.",
     "cta": "¿Tienes una idea? Hablemos."
   },
   "products": {
     "namepreview": {
       "title": "NamePreview",
-      "text": "Visualiza el nombre del cliente en múltiples estilos al instante. Reduce fricción y acelera decisiones.",
+      "text": "Visualiza nombres en múltiples estilos al instante. Acelera decisiones con clientes.",
       "image": "images/namepreview.webp"
     }
   }
