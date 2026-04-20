@@ -1,0 +1,18 @@
+[project]
+name = "ortiz-studio"
+title = "Ortiz Studio"
+description = ""
+directory = "/home/ortiz/Dev/ortiz.studio"
+
+[project.author]
+name = "Antonio Ortiz"
+username = "ortiz-antonio"
+url = "https://ortiz.studio"
+
+[project.links]
+repository = "git@github.com:ortiz-antonio/ortiz-studio"
+homepage = "https://ortiz-antonio.github.io/ortiz-studio"
+
+[templates]
+adapters = [ "astro" ]
+core = "core"

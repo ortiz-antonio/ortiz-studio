@@ -1,0 +1,17 @@
+---
+import type { HeroData } from '@core/content/types'
+const { data } = Astro.props as { data: HeroData }
+---
+
+<section class="ui-section">
+  <div class="ui-section-container flow">
+    <div class="lg:grid lg:cols-3 lg:items-center lg:gap-xl flow">
+      <div class="lg:col-span-2 flow">
+        <h1 class="ui-text-title ui-text-title-1">{data.title}</h1>
+        <p>{data.text}</p>
+      </div>
+    </div>
+
+    <a class="ui-button inline-block p-s" href="#">{data.cta}</a>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "Construyo software y objetos físicos",
+    "text": "Exploro ideas a través de proyectos: desde código hasta materia, trabajando con madera y piedra.",
+    "cta": "¿Tienes una idea? Hablemos."
+  },
+  "products": {
+    "namepreview": {
+      "title": "NamePreview",
+      "text": "Visualiza el nombre del cliente en múltiples estilos al instante. Reduce fricción y acelera decisiones.",
+      "image": "images/namepreview.webp"
+    }
+  }
+}

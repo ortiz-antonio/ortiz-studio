@@ -1,0 +1,31 @@
+{
+  "name": "template-tokens",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "lint:base": "task lint:base",
+    "lint:base:fix": "task lint:base:fix",
+    "lint:astro": "task lint:astro",
+    "lint:astro:fix": "task lint:astro:fix",
+    "lint": "task lint",
+    "lint:fix": "task lint:fix",
+    "dev": "task dev",
+    "build": "task build",
+    "serve": "task serve"
+  },
+  "dependencies": {
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.7.2",
+    "@unocss/astro": "^66.6.6",
+    "eslint": "^10.0.3",
+    "eslint-plugin-format": "^2.0.1",
+    "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "serve": "^14.2.6",
+    "unocss": "^66.6.6"
+
+  }
+}

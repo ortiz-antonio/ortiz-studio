@@ -1,0 +1,25 @@
+version: '3'
+
+tasks:
+  default:
+    - task: build-tokens-toml
+    - task: build-tokens-utopia
+    - task: build-theme
+
+  build-tokens-toml:
+    sources:
+      - 'tokens/*.toml'
+    cmds:
+      - yopo build:generate-json-tokens
+
+  build-tokens-utopia:
+    sources:
+      - 'utopia/*.js'
+    cmds:
+      - yopo build:utopia
+
+  build-theme:
+    sources:
+      - 'build/w3c/*.json'
+    cmds:
+      - 'yopo build:style-dictionary'

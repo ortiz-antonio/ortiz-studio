@@ -1,0 +1,34 @@
+---
+import '@assets/styles/reset.css'
+import '@assets/styles/fonts.css'
+
+import Meta from 'src/components/utils/Meta.astro'
+import Site from '@data/content/site.json'
+import landing from '@data/content/landing.json'
+
+const { hero } = landing
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Meta data={hero} />
+
+    <title>{Site.name}</title>
+  </head>
+  <body class="[ m-0 ]
+   [ font-base ui-text ui-text-body bg-base ]">
+    <main class="[ flex flex-col mx-1 ] [ flow ]">
+      <slot />
+    </main>
+    <footer>
+      <p>
+        {Site.authorName}
+        <a href={Site.authorSite}>{Site.authorSite}</a>
+      </p>
+    </footer>
+  </body>
+</html>

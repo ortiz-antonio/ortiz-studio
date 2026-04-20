@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "astro/tsconfigs/strict"
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@core/*": ["../../core/src/*"],
+      "@generated/*": ["../../core/generated/*"],
+      "@data/*": ["../../core/data/*"],
+      "@assets/*": ["../../core/assets/*"]
+    },
+    "types": [
+      "vite/client"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}

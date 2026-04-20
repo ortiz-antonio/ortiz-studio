@@ -1,0 +1,20 @@
+---
+import type { ProductsData } from '@core/content/types'
+
+const { data } = Astro.props as { data: ProductsData }
+---
+
+<section class="ui-section ui-section-odd">
+  <section class="ui-section-container flow">
+    <h2 class="ui-text-title-2">{data.title}</h2>
+    {
+      Object.values(data).map((product) => (
+        <>
+          <h3 class="ui-text-title-3">{product.title}</h3>
+          <p>{product.text}</p>
+          <img src={product.image} alt="" />
+        </>
+      ))
+    }
+  </section>
+</section>

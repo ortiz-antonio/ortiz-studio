@@ -1,0 +1,60 @@
+---
+import tokens from '@generated/theme'
+
+const fontName = tokens.fontFamily.base
+const fontWeightBold = tokens.fontWeight.bold
+const fontWeightRegular = tokens.fontWeight.regular
+---
+
+<section>
+  <h1>Design Tokens</h1>
+
+  <div class="font-base">
+    <h2>Font</h2>
+    <p>name: {fontName}</p>
+    <p>weight regular: {fontWeightRegular}</p>
+    <p>weight bold: {fontWeightBold}</p>
+  </div>
+
+  <div class="flow">
+    <h2>Text</h2>
+
+    <h1>This is title 1</h1>
+    <h2>This is title 2</h2>
+    <h3>This is title 3</h3>
+    <h4>This is title 4</h4>
+    <p>
+      This is paragraph: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea optio deserunt aliquid,
+      voluptatem maiores nesciunt deleniti sed? Perspiciatis fugiat consectetur in culpa aperiam inventore sed hic
+      libero praesentium sapiente?
+    </p>
+  </div>
+
+  <h2>Colors</h2>
+  <div class="grid grid-cols-3">
+    <div>
+      <h3>Accent</h3>
+      <span class="inline-block w-20 h-20 bg-accent"></span>
+    </div>
+    <div>
+      <h3>Accent Soft</h3>
+      <span class="inline-block w-20 h-20 bg-accent-soft"></span>
+    </div>
+    <div>
+      <h3>Base</h3>
+      <span class="inline-block w-20 h-20 bg-base"></span>
+    </div>
+    <div>
+      <h3>Surface</h3>
+      <span class="inline-block w-20 h-20 bg-surface"></span>
+    </div>
+    <div>
+      <h3>Foreground</h3>
+      <span class="inline-block w-20 h-20 bg-foreground"></span>
+    </div>
+    <div>
+      <h3>Muted</h3>
+      <span class="inline-block w-20 h-20 bg-muted"></span>
+    </div>
+  </div>
+</section>

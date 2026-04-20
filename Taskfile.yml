@@ -1,0 +1,111 @@
+version: '3'
+
+includes:
+  build-tokens: ./taskfiles/build-tokens.yml
+
+tasks:
+  default:
+    cmds:
+      - echo "Avaliable commands build"
+
+  install:
+    cmds:
+      - task install:base
+      - task install:astro
+
+  install:base:
+    dir: ./
+    sources:
+      - package.json
+    cmds:
+      - pnpm install --prefer-offline
+
+  install:astro:
+    dir: ./adapters/astro
+    sources:
+      - package.json
+    cmds:
+      - pnpm install --prefer-offline
+
+  astro:check:
+    dir: ./adapters/astro
+    cmds:
+      - npx astro check
+
+  lint:
+    deps: [install]
+    cmds:
+      - task lint:base
+      - task lint:astro
+
+  lint:base:
+    cmds:
+      - pnpm eslint . --config eslint.config.js --cache
+
+  lint:astro:
+    deps: [astro:check]
+    dir: ./adapters/astro
+    cmds:
+      - pnpm eslint . --config eslint.config.js --cache
+
+  lint:fix:
+    deps: [install]
+    cmds:
+      - task lint:base:fix
+      - task lint:astro:fix
+
+  lint:base:fix:
+    cmds:
+      - pnpm eslint . --config eslint.config.js --cache --fix
+
+  lint:astro:fix:
+    deps: [astro:check]
+    dir: ./adapters/astro
+    cmds:
+      - pnpm eslint . --config eslint.config.js --cache --fix
+
+  assets:
+    sources:
+      - './core/assets/**/*'
+    generates:
+      - ./core/assets/.assets.stamp
+    cmds:
+      - rsync -a --delete ./core/assets/ ./adapters/astro/public/
+      - touch ./core/assets/.assets.stamp
+
+  build:
+    sources:
+      - ./adapters/astro/**/*
+      - '!./adapters/astro/node_modules/**'
+      - '!./adapters/astro/dist/**'
+    generates:
+      - .build.stamp
+    deps: [lint, assets]
+    cmds:
+      - rm -rf dist
+      - pnpm --filter ./adapters/astro build && cp -r ./adapters/astro/dist .
+      - touch .build.stamp
+
+  dev:
+    deps: [build-tokens, assets]
+    cmds:
+      - pnpm --filter ./adapters/astro dev
+
+  serve:
+    deps: [build-tokens, build, assets]
+    cmds:
+      - pnpm exec serve dist/
+
+  deploy:
+    deps: [build-tokens, build, assets]
+    cmds:
+      - pnpm gh-pages -d dist -b deploy
+
+  init:
+    deps: [install]
+    cmds:
+      - pnpm exec husky
+      - task: build-tokens
+      - task: install
+      - task: lint:fix
+      - task: build

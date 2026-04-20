@@ -1,0 +1,15 @@
+---
+import Hero from '../components/Hero.astro'
+import landing from '@data/content/landing.json'
+
+import Layout from '../layouts/Layout.astro'
+import type { HeroData, ProductsData } from '@core/content/types'
+import Products from 'src/components/Products.astro'
+
+const { hero, products } = landing as { hero: HeroData; products: ProductsData }
+---
+
+<Layout>
+  <Hero data={hero} />
+  <Products data={products} />
+</Layout>
