@@ -1,14 +1,16 @@
 {
   "hero": {
-    "title": "Frontend escalable con arquitectura hexagonal",
-    "text": "Desarrollo aplicaciones web fáciles de mantener, adaptar y extender sin romper lo existente.",
-    "cta": "¿Tienes una idea? Hablemos."
+    "title": "Pequeñas apps web",
+    "text": "Claras, desacopladas y pensadas para escalar.",
+    "cta": "Ver proyectos"
   },
   "products": {
     "namepreview": {
       "title": "NamePreview",
-      "text": "Visualiza nombres en múltiples estilos al instante. Acelera decisiones con clientes.",
-      "image": "images/namepreview.webp"
+      "text": "Visualiza nombres en múltiples estilos al instante. Reduce iteraciones en procesos de diseño.",
+      "image": "images/namepreview.webp",
+      "image_alt": "screenshot mostrando nombre emma en diferentes estilos",
+      "web": "https://www.namepreview.app/"
     }
   }
 }

@@ -35,8 +35,8 @@ export default {
     `,
 
   'ui-button': `
-    p-3xs
-    rounded-md border-0 font-bold text-color-foreground
+    p-s
+    rounded-md border-0 font-bold text-color-foreground decoration-none
     ${STATE_BASE}
     ${INTERACTION_BASE}
   `,

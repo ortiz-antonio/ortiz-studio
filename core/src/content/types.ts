@@ -8,6 +8,8 @@ export interface ProductItem {
   title: string
   text: string
   image: string
+  image_alt: string
+  web: string
 }
 
 export interface ProductsData {
