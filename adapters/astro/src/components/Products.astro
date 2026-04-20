@@ -13,7 +13,13 @@ const { data } = Astro.props as { data: ProductsData }
           <h3 class="ui-text-title-3">{product.title}</h3>
           <p>{product.text}</p>
           <a href={product.web}>
-            <img src={product.image} alt={product.image_alt} width="378" height="542" />
+            <img
+              class="object-contain h-full w-auto"
+              src={product.image}
+              alt={product.image_alt}
+              width="378"
+              height="542"
+            />
           </a>
         </>
       ))
