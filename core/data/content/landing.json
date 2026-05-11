@@ -1,13 +1,14 @@
 {
   "hero": {
-    "title": "Small web apps",
-    "text": "Clear, decoupled, and built to scale.",
+    "title": "Antonio Ortiz",
+    "subtitle": "I build focused web apps",
+    "text": "Small, maintainable systems built with hexagonal architecture.",
     "cta": "View latest projects"
   },
   "products": {
     "namepreview": {
       "title": "NamePreview",
-      "text": "Preview names instantly in multiple styles. Reduce design iterations and speed up approval workflows.",
+      "text": "Generate instant typography previews to speed up client approvals.",
       "image": "images/namepreview.webp",
       "image_alt": "screenshot showing the name Emma in different styles",
       "web": "https://www.namepreview.app/"
