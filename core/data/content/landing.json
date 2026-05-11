@@ -1,15 +1,15 @@
 {
   "hero": {
-    "title": "Pequeñas apps web",
-    "text": "Claras, desacopladas y pensadas para escalar.",
-    "cta": "Ver proyectos"
+    "title": "Small web apps",
+    "text": "Clear, decoupled, and built to scale.",
+    "cta": "View latest projects"
   },
   "products": {
     "namepreview": {
       "title": "NamePreview",
-      "text": "Visualiza nombres en múltiples estilos al instante. Reduce iteraciones en procesos de diseño.",
+      "text": "Preview names instantly in multiple styles. Reduce design iterations and speed up approval workflows.",
       "image": "images/namepreview.webp",
-      "image_alt": "screenshot mostrando nombre emma en diferentes estilos",
+      "image_alt": "screenshot showing the name Emma in different styles",
       "web": "https://www.namepreview.app/"
     }
   }
